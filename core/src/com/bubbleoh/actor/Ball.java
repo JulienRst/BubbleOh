@@ -21,14 +21,23 @@ public class Ball extends Actor {
     private ShapeRenderer shapeRenderer;
     protected Body body;
 
+    /**
+     *
+     * @param body , contexte physique
+     * @param speed , vitesse
+     * @param vX , déplacement en X
+     * @param vY , déplacement en Y
+     * @param angle , angle de départ
+     */
+
     public Ball(Body body, float speed , float vX , float vY , float angle) {
         this.speed = speed;
         this.vX = vX;
         this.vY = vY;
         this.angle = angle;
         shapeRenderer = new ShapeRenderer();
-        this.vX = (float)(speed * Math.cos(Math.toRadians(angle)));
-        this.vY = (float)(-speed * (float)Math.sin(Math.toRadians(angle)));
+//        this.vX = (float)(speed * Math.cos(Math.toRadians(angle)));
+//        this.vY = (float)(-speed * (float)Math.sin(Math.toRadians(angle)));
         this.body = body;
     }
 

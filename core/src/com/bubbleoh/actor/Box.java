@@ -20,11 +20,23 @@ public class Box extends Actor {
     private ShapeRenderer shapeRenderer;
     protected Body body;
 
+    /**
+     * On initialise le shape Renderer (qui va nous permettre de dessiner la forme que l'on veut)
+     *
+     * @param body , définition du corps de notre objet généré dans GameStage
+     */
     public Box(Body body) {
         shapeRenderer = new ShapeRenderer();
         this.body = body;
     }
 
+    /**
+     * batch c'est le moteur de rendu a qui on va dire ce qu'il doit dessiner
+     * parentAlpha c'est utilisé par la super.draw()
+     *
+     * @param batch
+     * @param parentAlpha
+     */
     @Override
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);
@@ -36,6 +48,10 @@ public class Box extends Actor {
         batch.begin();
     }
 
+    /**
+     * On a pas besoin d'update la box à chaque frame, d'où le vide de cette fonction
+     * @param delta
+     */
     @Override
     public void act(float delta){
         super.act(delta);
