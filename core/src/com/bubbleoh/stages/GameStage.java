@@ -9,11 +9,18 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Scaling;
 import com.badlogic.gdx.utils.viewport.ScalingViewport;
 import com.bubbleoh.Ball;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.physics.box2d.*;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+
 
 /**
  * Created by Julien on 19/05/2016.
  */
-public class GameStage extends Stage {
+public class GameStage extends Stage{
 
     private OrthographicCamera camera;
     private Ball ball;
@@ -38,17 +45,24 @@ public class GameStage extends Stage {
         camera.update();
     }
 
+
     private void setUpBall(){
         World world = new World(new Vector2(0, -10),true);
         BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyDef.BodyType.DynamicBody;
         bodyDef.position.set(new Vector2(0,0));
         Body body = world.createBody(bodyDef);
-        float speed = 2;
-        float vX = 0;
-        float vY = 10;
-        float angle = 10;
-        ball = new Ball( body,  speed ,  vX ,  vY ,  angle);
+
+
+
+    float speed = 2;
+    float vX = 0;
+    float vY = 10;
+    float px =  420;
+    float py =  200;
+    float angle = 10;
+    ball = new Ball(body,speed ,px, py, vX ,  vY , angle);
+
         addActor(ball);
     }
 }
