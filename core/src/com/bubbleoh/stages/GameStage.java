@@ -47,7 +47,11 @@ public class GameStage extends Stage {
         bodyDef.type = BodyDef.BodyType.DynamicBody;
         bodyDef.position.set(new Vector2(0,0));
         Body body = world.createBody(bodyDef);
-        ball = new Ball(body);
+        float speed = 2;
+        float vX = 0;
+        float vY = 10;
+        float angle = 10;
+        ball = new Ball( body,  speed ,  vX ,  vY ,  angle);
         addActor(ball);
     }
 
