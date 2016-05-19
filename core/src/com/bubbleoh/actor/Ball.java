@@ -1,9 +1,13 @@
 package com.bubbleoh.actor;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+
 
 /**
  * Created by Julien on 19/05/2016.
@@ -11,8 +15,8 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 public class Ball extends Actor {
 
     private final float speed;
-    private float x = 420;
-    private float y = 200;
+    private float x ;
+    private float y ;
 
     private float vX;
     private float vY;
@@ -30,8 +34,10 @@ public class Ball extends Actor {
      * @param angle , angle de départ
      */
 
-    public Ball(Body body, float speed , float vX , float vY , float angle) {
+    public Ball(Body body, float speed ,float px,float py, float vX , float vY , float angle) {
         this.speed = speed;
+        this.x = px;
+        this.y = py;
         this.vX = vX;
         this.vY = vY;
         this.angle = angle;
@@ -39,7 +45,10 @@ public class Ball extends Actor {
 //        this.vX = (float)(speed * Math.cos(Math.toRadians(angle)));
 //        this.vY = (float)(-speed * (float)Math.sin(Math.toRadians(angle)));
         this.body = body;
+
     }
+
+
 
     @Override
     public void draw(Batch batch, float parentAlpha) {
@@ -52,17 +61,24 @@ public class Ball extends Actor {
         batch.begin();
     }
 
+
     @Override
     public void act(float delta){
         super.act(delta);
+        boolean estTouche = Gdx.input.isTouched();
         float ballMinX = 0+20+5;//+radius
         float ballMinY = 0+20+5;
         float ballMaxX = 840-20-5;
         float ballMaxY = 400-20-5;
 
-        this.x += this.vX;
-        this.y += this.vY;
-
+        if(estTouche){
+            this.x = Gdx.input.getX();
+            this.y = Gdx.input.getY();
+        }
+            else {
+            this.x += this.vX;
+            this.y += this.vY;
+        }
         if (x < ballMinX) {
             vX = -vX;
             x = ballMinX;

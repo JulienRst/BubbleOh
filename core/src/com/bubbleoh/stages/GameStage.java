@@ -19,7 +19,7 @@ import com.bubbleoh.actor.Box;
  *
  * @see com.badlogic.gdx.scenes.scene2d.Stage
  */
-public class GameStage extends Stage {
+public class GameStage extends Stage{
 
     private OrthographicCamera camera;
     private Ball ball;
@@ -83,7 +83,10 @@ public class GameStage extends Stage {
         float vX = 2;
         float vY = 10;
         float angle = 0; //10;
-        ball = new Ball( body,  speed ,  vX ,  vY ,  angle);
+
+        float px =  420;
+        float py =  200;
+        ball = new Ball(body,speed ,px, py, vX ,  vY , angle);
         addActor(ball);
     }
 

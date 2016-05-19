@@ -2,11 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Julien\Desktop\JAVA\BubbleOh\core\build\libs\core-1.0.jar"
+        jar="C:\Users\Asmae\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-backend-android\1.9.2\342b830bc718dc1965c8f13fc58dc500e8bd262f\gdx-backend-android-1.9.2.jar"
         jumboMode="false"
         revision="23.0.3"
-        sha1="0048f62c2e041499cbf8aa4933c0de9fdebbb451">
-        <dex dex="C:\Users\Julien\Desktop\JAVA\BubbleOh\android\build\intermediates\pre-dexed\debug\core-1.0_36337e2956b44fe5a93fcc82547de3434a7e12d2.jar" />
+        sha1="342b830bc718dc1965c8f13fc58dc500e8bd262f">
+        <dex dex="D:\BubbleOh\android\build\intermediates\pre-dexed\debug\gdx-backend-android-1.9.2_28e9ae8513823463b189a2084719a9ed1ba1292d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Asmae\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-freetype\1.9.2\3609253d14edb1b3ca5aacff4e06989edde75be4\gdx-freetype-1.9.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3609253d14edb1b3ca5aacff4e06989edde75be4">
+        <dex dex="D:\BubbleOh\android\build\intermediates\pre-dexed\debug\gdx-freetype-1.9.2_21a58102ef20b6bc38f6d90f4fd6803c71d5a832.jar" />
+    </item>
+    <item
+        jar="C:\Users\Asmae\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx\1.9.2\e641cb91bec06bc64d9ddf7a7d7062caceec73cd\gdx-1.9.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e641cb91bec06bc64d9ddf7a7d7062caceec73cd">
+        <dex dex="D:\BubbleOh\android\build\intermediates\pre-dexed\debug\gdx-1.9.2_7b075275fbc7ae6eb612ff7c47c24f8b048f503e.jar" />
+    </item>
+    <item
+        jar="D:\BubbleOh\core\build\libs\core-1.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="6c61f801798c27529a1e6db826b57af520a1d61f">
+        <dex dex="D:\BubbleOh\android\build\intermediates\pre-dexed\debug\core-1.0_7109f227318fdcaab0e01abd0ff0eb8b6fb3eb70.jar" />
+    </item>
+    <item
+        jar="C:\Users\Asmae\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-box2d\1.9.2\b78eaa90aaaf7830e6dffff587ea6e859c2787b2\gdx-box2d-1.9.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="b78eaa90aaaf7830e6dffff587ea6e859c2787b2">
+        <dex dex="D:\BubbleOh\android\build\intermediates\pre-dexed\debug\gdx-box2d-1.9.2_86072f0ee4681544c5f17df2c379ba8bb95d8de9.jar" />
     </item>
 
 </items>
