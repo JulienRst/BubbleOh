@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:theme="@style/GdxTheme" >
         <activity
-            android:name=".desktop.AndroidLauncher"
+            android:name="com.bubbleoh.AndroidLauncher"
             android:label="BubbleOh"
             android:screenOrientation="landscape"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
