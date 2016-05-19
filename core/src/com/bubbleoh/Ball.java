@@ -10,17 +10,25 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
  */
 public class Ball extends Actor {
 
-    private int x = 0;
-    private int y = 0;
+    private final float speed;
+    private float x = 420;
+    private float y = 200;
 
-    private int vX = 5;
-    private int vY = 5;
+    private float vX;
+    private float vY;
+    private float angle;
 
     private ShapeRenderer shapeRenderer;
     protected Body body;
 
-    public Ball(Body body) {
+    public Ball(Body body, float speed , float vX , float vY , float angle) {
+        this.speed = speed;
+        this.vX = vX;
+        this.vY = vY;
+        this.angle = angle;
         shapeRenderer = new ShapeRenderer();
+        this.vX = (float)(speed * Math.cos(Math.toRadians(angle)));
+        this.vY = (float)(-speed * (float)Math.sin(Math.toRadians(angle)));
         this.body = body;
     }
 
@@ -38,8 +46,29 @@ public class Ball extends Actor {
     @Override
     public void act(float delta){
         super.act(delta);
+        float ballMinX = 0+15;//+radius
+        float ballMinY = 0+15;
+        float ballMaxX = 840-15;
+        float ballMaxY = 400-15;
+
         this.x += this.vX;
         this.y += this.vY;
+
+        if (x < ballMinX) {
+            vX = -vX;
+            x = ballMinX;
+        } else if (x > ballMaxX) {
+            vX = -vX;
+            x = ballMaxX;
+        }
+
+        if (y < ballMinY) {
+            vY = -vY;
+            y = ballMinY;
+        } else if (y > ballMaxY) {
+            vY = -vY;
+            y = ballMaxY;
+        }
     }
 
 }
