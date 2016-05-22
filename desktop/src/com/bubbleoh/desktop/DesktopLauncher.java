@@ -19,12 +19,14 @@ package com.bubbleoh.desktop;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.bubbleoh.BubbleOh;
+import com.bubbleoh.Config;
+
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.width = 840;
-		config.height = 400;
+		config.width = Config.WINDOW_WIDTH;
+		config.height = Config.WINDOW_HEIGHT;
 		new LwjglApplication(new BubbleOh(),config);
 	}
 }

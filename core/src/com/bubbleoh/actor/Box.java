@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.bubbleoh.Config;
 
 /**
  * Created by Julien on 19/05/2016.
@@ -13,8 +14,8 @@ public class Box extends Actor {
 
     private float x = 5;
     private float y = 5;
-    private float w = 830;
-    private float h = 390;
+    private float w = Config.WINDOW_WIDTH;
+    private float h = Config.WINDOW_HEIGHT;
 
 
     private ShapeRenderer shapeRenderer;

@@ -5,6 +5,11 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.bubbleoh.stages.GameStage;
 
+/**
+ * Screen c'est la class qui va nous servir de simple moteur
+ * Avec le constructeur on dit : cette scène sera dessinée
+ * Avec la fonction render, on clear l'espace et on dessine les éléments de la scène
+ */
 public class GameScreen implements Screen {
 
 
